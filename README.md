@@ -3,7 +3,7 @@ Data Cleaning Pandas Merging three files and answering some questions
 
 *Excel file Energy Indicators.xls, which contain a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013
 
-##### Data Cleaning Tasks:
+##### Data Cleaning Tasks - Energy:
 
 1. Keep in mind that this is an Excel file, and not a comma separated values file. Also, make sure to exclude the footer and header information from the datafile. The first two columns are unneccessary, so you should get rid of them, and you should change the column labels so that the columns are:
 ['Country', 'Energy Supply', 'Energy Supply per Capita', '% Renewable']
@@ -26,7 +26,7 @@ Data Cleaning Pandas Merging three files and answering some questions
 
 *World_bank.csv is a csv containing countries GDP from 1960 to 2015 from [World Bank](http://data.worldbank.org/indicator/NY.GDP.MKTP.CD).
 
-##### Data Clenaing Tasks:
+##### Data Clenaing Tasks - GDP:
 1. Load the GDP data. Make sure to skip the header.
 2. Rename the following list of countries:
    "Korea, Rep.": "South Korea", 
@@ -35,7 +35,7 @@ Data Cleaning Pandas Merging three files and answering some questions
 
 *[Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology](http://www.scimagojr.com/countryrank.php?category=2102) from the file `scimagojr-3.xlsx`,  ranks countries based on their journal contributions in the aforementioned area. 
 
-##### Data Cleaning Tasks:
+##### Data Cleaning Tasks - ScimEn:
 1. Load de data. Call this DataFrame **ScimEn**.
 2. Join the three datasets: GDP, Energy, and ScimEn into a new dataset (using the intersection of country names). Use only the last 10 years (2006-2015) of GDP data and only the    top 15 countries by Scimagojr 'Rank' (Rank 1 through 15). 
 
