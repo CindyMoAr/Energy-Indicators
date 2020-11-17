@@ -1,9 +1,9 @@
 # Energy-Indicators
-Data Cleaning Pandas
+Data Cleaning Pandas Merging three files and answering some questions
 
 *Excel file Energy Indicators.xls, which contain a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013
 
-##### Tasks:
+##### Data Cleaning Tasks:
 
 1. Keep in mind that this is an Excel file, and not a comma separated values file. Also, make sure to exclude the footer and header information from the datafile. The first two columns are unneccessary, so you should get rid of them, and you should change the column labels so that the columns are:
 ['Country', 'Energy Supply', 'Energy Supply per Capita', '% Renewable']
@@ -26,7 +26,7 @@ Data Cleaning Pandas
 
 *World_bank.csv is a csv containing countries GDP from 1960 to 2015 from [World Bank](http://data.worldbank.org/indicator/NY.GDP.MKTP.CD).
 
-##### Tasks:
+##### Data Clenaing Tasks:
 1. Load the GDP data. Make sure to skip the header.
 2. Rename the following list of countries:
    "Korea, Rep.": "South Korea", 
@@ -35,7 +35,7 @@ Data Cleaning Pandas
 
 *[Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology](http://www.scimagojr.com/countryrank.php?category=2102) from the file `scimagojr-3.xlsx`,  ranks countries based on their journal contributions in the aforementioned area. 
 
-##### Tasks:
+##### Data Cleaning Tasks:
 1. Load de data. Call this DataFrame **ScimEn**.
 2. Join the three datasets: GDP, Energy, and ScimEn into a new dataset (using the intersection of country names). Use only the last 10 years (2006-2015) of GDP data and only the    top 15 countries by Scimagojr 'Rank' (Rank 1 through 15). 
 
@@ -43,4 +43,16 @@ Data Cleaning Pandas
        'Citations per document', 'H index', 'Energy Supply',
        'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008',
        '2009', '2010', '2011', '2012', '2013', '2014', '2015'].
+       
+       
+### Questions
 
+1. The previous step joined three datasets then reduced this to just the top 15 entries. When you joined the datasets, but before you reduced this to the top 15 items, how many entries did you lose?
+2. What is the average GDP over the last 10 years for each country? (exclude missing values from this calculation.)
+3. By how much had the GDP changed over the 10 year span for the country with the 6th largest average GDP?
+4. What is the mean Energy Supply per Capita?
+5. What country has the maximum % Renewable and what is the percentage?
+6. Create a new column that is the ratio of Self-Citations to Total Citations. What is the maximum value for this new column, and what country has the highest ratio?
+7. Create a column that estimates the population using Energy Supply and Energy Supply per capita. What is the third most populous country according to this estimate?
+8. Create a column that estimates the number of citable documents per person. What is the correlation between the number of citable documents per capita and the energy supply per capita? Use the .corr() method, (Pearson's correlation).
+9. Use the built-in function plot() to visualize the relationship between Energy Supply per Capita vs. Citable docs per Capita
