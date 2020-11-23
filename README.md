@@ -1,5 +1,5 @@
 # Energy-Indicators
-Data Cleaning Pandas Merging three files and answering some questions
+Data Cleaning with Pandas, Merging three files and answering some questions
 
 *Excel file Energy Indicators.xls, which contain a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013
 
