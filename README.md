@@ -1,11 +1,11 @@
 # Energy-Indicators
-Data Cleaning with Pandas, Merging three files and answering some questions
+Data cleaning with Pandas, merging three files and answering some questions.
 
-*Excel file Energy Indicators.xls, which contain a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013
+*Excel file Energy Indicators.xls, which contain a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013.
 
 ##### Data Cleaning Tasks - Energy:
 
-1. Keep in mind that this is an Excel file, and not a comma separated values file. Also, make sure to exclude the footer and header information from the datafile. The first two columns are unneccessary, so you should get rid of them, and you should change the column labels so that the columns are:
+1. Load the data. Keep in mind that this is an Excel file, and not a comma separated values file. Also, make sure to exclude the footer and header information from the datafile. The first two columns are unneccessary, so you should get rid of them, and you should change the column labels so that the columns are:
 ['Country', 'Energy Supply', 'Energy Supply per Capita', '% Renewable']
 
 2. Convert Energy Supply to gigajoules (there are 1,000,000 gigajoules in a petajoule). 
